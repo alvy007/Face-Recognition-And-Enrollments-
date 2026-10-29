@@ -18,8 +18,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install test dependencies
-        run: python -m pip install pytest numpy opencv-python-headless
+        run: python -m pip install pytest numpy opencv-python-headless "cryptography>=43,<48"
       - name: Syntax check
-        run: python -m compileall -q app.py download_models.py
+        run: python -m compileall -q app.py download_models.py cloud face_core.py
       - name: Unit tests
         run: python -m pytest -q tests

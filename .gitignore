@@ -10,3 +10,9 @@ __pycache__/
 *.mp4
 *.avi
 *.csv
+
+# Never commit live cloud credentials or local test data
+.streamlit/secrets.toml
+**/.env
+**/.env.*
+
