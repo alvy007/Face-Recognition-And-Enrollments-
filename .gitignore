@@ -1,0 +1,12 @@
+models/
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+*.npz
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.avi
+*.csv
