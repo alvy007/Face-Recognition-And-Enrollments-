@@ -99,3 +99,20 @@ def clear_gallery(dsn: str) -> int:
         with connection.cursor() as cursor:
             cursor.execute("DELETE FROM public.visionid_faces")
             return cursor.rowcount
+
+
+def check_connection(dsn: str) -> bool:
+    """Verify PostgreSQL connectivity and that the expected table is accessible.
+
+    This is intentionally called only after admin login so public visitors
+    cannot use the app to probe database connectivity.
+    """
+    with _connect(dsn) as connection:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT to_regclass('public.visionid_faces')")
+            result = cursor.fetchone()
+            if not result or result[0] is None:
+                raise RuntimeError("visionid_faces table has not been created")
+            cursor.execute("SELECT COUNT(*) FROM public.visionid_faces")
+            cursor.fetchone()
+    return True

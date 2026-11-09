@@ -1,5 +1,6 @@
 streamlit>=1.40,<2
 opencv-python-headless>=4.10,<5
 numpy>=1.26,<3
+Pillow>=10.4,<13
 cryptography>=43,<48
 psycopg[binary]>=3.2,<4
