@@ -87,7 +87,7 @@ python -m pytest -q tests
 python -m compileall -q app.py face_core.py download_models.py cloud
 ```
 
-Automated tests run in GitHub Actions on Python 3.11 and 3.12. They do not prove that a remote host can reach Supabase or download the models. Those integrations must be tested after deployment. The app never claims an identity match is certain; cosine similarity is **not** a probability.
+Automated tests, including an initial Streamlit UI-render smoke test, run in GitHub Actions on Python 3.11 and 3.12. They do not prove that a remote host can reach Supabase or download the models. Those integrations must be tested after deployment. The app never claims an identity match is certain; cosine similarity is **not** a probability.
 
 ## Privacy and limits
 

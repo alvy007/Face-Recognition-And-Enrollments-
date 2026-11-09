@@ -3,7 +3,8 @@
 ## Verified offline
 
 - [x] Python compile check across all source and tests
-- [x] 40 of 40 pytest tests pass in the available development environment
+- [x] 40 of 40 offline unit tests pass in the available development environment
+- [ ] Streamlit initial-render smoke test awaiting GitHub Actions execution
 - [x] OpenCV bounding-box rendering functions behave as expected with synthetic test frames
 - [x] Face embedding normalization, similarity, Unknown threshold behavior and local gallery persistence tested
 - [x] Fernet encryption roundtrip, corruption, invalid-key, incorrect-key and feature-size validation tested
