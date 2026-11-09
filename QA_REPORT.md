@@ -4,7 +4,7 @@
 
 - [x] Python compile check across all source and tests
 - [x] 40 of 40 offline unit tests pass in the available development environment
-- [ ] Streamlit initial-render smoke test awaiting GitHub Actions execution
+- [x] Streamlit initial-render smoke test passed in GitHub Actions for Python 3.11 and 3.12
 - [x] OpenCV bounding-box rendering functions behave as expected with synthetic test frames
 - [x] Face embedding normalization, similarity, Unknown threshold behavior and local gallery persistence tested
 - [x] Fernet encryption roundtrip, corruption, invalid-key, incorrect-key and feature-size validation tested
@@ -12,6 +12,12 @@
 - [x] Browser image decode accepts JPEG/PNG, rejects invalid/oversized input and reduces large images
 - [x] Partial/invalid cloud Secrets rejected; temporary mode and full configuration parsed
 - [x] No model binaries, face images, saved gallery, passwords, or live secrets included in the submission archive
+
+## GitHub Actions result
+
+- Workflow: https://github.com/alvy007/Face-Recognition-And-Enrollments-/actions/runs/42593247790
+- Python 3.11: passed (41 tests, including one Streamlit render test)
+- Python 3.12: passed (41 tests, including one Streamlit render test)
 
 ## Pending live acceptance tests
 
